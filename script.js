@@ -129,7 +129,8 @@ function emissaoRelatorios(relatorios) {
             `);
             menu();
         default:
-            menu();
+            alert("Informe um valor válido");
+            break;
     }
 }
 menu();

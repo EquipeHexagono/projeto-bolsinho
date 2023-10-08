@@ -137,7 +137,9 @@ function emissaoRelatorios(relatorios: number) {
             `)
             menu();
         default:
-            menu();
+            alert("Informe um valor válido")
+            break;
+
     }
 
 }

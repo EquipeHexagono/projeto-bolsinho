@@ -62,6 +62,7 @@ function cadastroDespesa(categoriaDespesa) {
 }
 // Função para emissão dos relatorios
 function emissaoRelatorios(relatorios) {
+    // Códigos para formatação da exibição do Array no relatorio.
     const lanchesFormatados = lanches.map((lanches, x) => {
         if ((x + 1) % 3 === 0) {
             return `${lanches}\n`;
@@ -94,16 +95,22 @@ function emissaoRelatorios(relatorios) {
             return `${material}`;
         }
     }).join(' - ');
+    // Código para fazer a somatoria total das categorias
+    let totalLanches = 0;
+    let totalLivros = 0;
+    let totalTransporte = 0;
+    let totalMaterial = 0;
+    // Switch para exibir resultados
     switch (relatorios) {
         case 1:
             alert(`Relatorio de despesas unificado:\n
-            Categoria: Lanche | Valor Total: R$${0}\n
+            Categoria: Lanche | Valor Total: R$${totalLanches}\n
 
-            Categoria: Livros | Valor Total: R$${0}\n
+            Categoria: Livros | Valor Total: R$${totalLivros}\n
 
-            Categoria: Transporte | Valor Total: R$${0}\n
+            Categoria: Transporte | Valor Total: R$${totalTransporte}\n
 
-            Categoria: Material | Valor Total: R$${0}
+            Categoria: Material | Valor Total: R$${totalMaterial}
             `);
             menu();
         case 2:

@@ -1,6 +1,9 @@
 "use strict";
+// Função inicial para exibir menu da aplicação
 function menu() {
+    // Opções do Menu
     let opcao = Number(prompt("Olá, oque deseja executar?\n1 - Cadastrar Despesa\n2 - Emitir Relatório\n3 - Sair"));
+    // Switch para executar a opção escolhida no prompt acima.
     switch (opcao) {
         case 1:
             let categoriaDespesa = Number(prompt("Qual categoria é sua despesa?\n1 - Lanches\n2 - Livros\n3 - Transporte\n4 - Material Didático"));
@@ -23,6 +26,7 @@ const lanches = [];
 const livros = [];
 const transporte = [];
 const material = [];
+// Função para cadastrar as Despesas
 function cadastroDespesa(categoriaDespesa) {
     // Dados que devem ser inseridos de cada despesa.
     const descricao = String(prompt("Informe a descrição da despesa"));
@@ -71,6 +75,21 @@ function emissaoRelatorios(relatorios) {
             `);
             menu();
         case 2:
+            alert(`Relatorio de despesas detalhado:\n
+            Categoria: Lanche\n
+            ${lanches} - \n
+
+            Categoria: Livros\n
+            ${livros} - \n
+
+            Categoria: Transporte\n
+            ${transporte} - \n
+
+            Categoria: Material\n
+            ${material} - 
+            `);
+        default:
+            menu();
     }
 }
 menu();

@@ -119,8 +119,25 @@ function emissaoRelatorios(relatorios: number) {
     let totalTransporte = 0;
     let totalMaterial = 0;
 
+    function calcularTotalCategoria(categoria: any[]): number {
+        let total = 0;
+
+        for (let i = 0; i < categoria.length; i += 3) {
+            total += categoria[i + 1];
+        }
+
+        return total;
+    }
+
+
+
+    calcularTotalCategoria(lanches)
+    calcularTotalCategoria(livros)
+    calcularTotalCategoria(transporte)
+    calcularTotalCategoria(material)
     // Switch para exibir resultados
     switch (relatorios) {
+
         case 1:
             alert(`Relatorio de despesas unificado:\n
             Categoria: Lanche | Valor Total: R$${totalLanches}\n

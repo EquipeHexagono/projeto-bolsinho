@@ -112,6 +112,19 @@ function emissaoRelatorios(relatorios) {
     let totalLivros = 0;
     let totalTransporte = 0;
     let totalMaterial = 0;
+
+    function calcularTotal(categoria) {
+        let total = 0;
+        for (let i = 0; i < categoria.length; i += 3) {
+            total += categoria[i + 1];
+        }
+        return total;
+    }
+    //Calculando o valor total gasto de cada acategria
+    calcularTotal(lanches)
+    calcularTotal(material);
+    calcularTotal(transporte);
+    calcularTotal(material);
     // Switch para exibir resultados
     switch (relatorios) {
         case 1:

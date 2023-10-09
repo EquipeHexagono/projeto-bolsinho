@@ -1,3 +1,4 @@
+
 // Função inicial para exibir menu da aplicação
 function menu() {
     // Opções do Menu
@@ -7,11 +8,21 @@ function menu() {
     switch (opcao) {
         case 1:
             let categoriaDespesa = Number(prompt("Qual categoria é sua despesa?\n1 - Lanches\n2 - Livros\n3 - Transporte\n4 - Material Didático"));
-            cadastroDespesa(categoriaDespesa);
+            if (categoriaDespesa >= 1 && categoriaDespesa <= 4) {
+                cadastroDespesa(categoriaDespesa);
+            } else {
+                alert("Opção inválida.");
+                menu();
+            }
             break;
         case 2:
             let relatorios = Number(prompt("Qual relatório deseja emitir?\n1 - Relatório Unificado\n2 - Relatório Detalhado"));
-            emissaoRelatorios(relatorios);
+            if (relatorios === 1 || relatorios === 2) {
+                emissaoRelatorios(relatorios);
+            } else {
+                alert("Opção inválida.");
+                menu();
+            }
             break;
         case 3:
             alert("Programa encerrado.");

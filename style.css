@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#nav-bar {
+    background-color: black;
+    width: 5%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 2px solid white;
+}
+
+#nav-bar h1 {
+    color: white;
+}
+
+section {
+    width: 95vw;
+    height: 100vh;
+    background-color: gainsboro;
+    padding: 50px;
+}

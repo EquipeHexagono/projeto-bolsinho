@@ -145,4 +145,3 @@ function emissaoRelatorios(relatorios) {
             break;
     }
 }
-menu();

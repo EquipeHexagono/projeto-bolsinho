@@ -154,5 +154,3 @@ function emissaoRelatorios(relatorios: number) {
     }
 
 }
-
-menu();

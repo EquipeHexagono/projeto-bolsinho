@@ -11,18 +11,35 @@ main {
 }
 
 #nav-bar {
-    background-color: black;
+    background-color: white;
     width: 5%;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-right: 2px solid white;
+    border-right: 2px solid black;
 }
 
-#nav-bar h1 {
-    color: white;
+#nav-bar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: none;
+    width: 100%;
+    height: 10%;
+    margin: 60px 0px;
+    cursor: pointer;
+}
+
+#nav-bar button:hover {
+    background-color: rgb(189, 189, 189);
+    transition: all 0.4s ease-in-out;
+}
+
+#nav-bar button img {
+    width: 90%;
+    height: 100%;
 }
 
 section {

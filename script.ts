@@ -1,77 +1,5 @@
 
-// Função inicial para exibir menu da aplicação
-function menu() {
-    // Opções do Menu
-    let opcao = Number(prompt("Olá, oque deseja executar?\n1 - Cadastrar Despesa\n2 - Emitir Relatório\n3 - Sair"));
 
-    // Switch para executar a opção escolhida no prompt acima.
-    switch (opcao) {
-        case 1:
-            let categoriaDespesa = Number(prompt("Qual categoria é sua despesa?\n1 - Lanches\n2 - Livros\n3 - Transporte\n4 - Material Didático"));
-            if (categoriaDespesa >= 1 && categoriaDespesa <= 4) {
-                cadastroDespesa(categoriaDespesa);
-            } else {
-                alert("Opção inválida.");
-                menu();
-            }
-            break;
-        case 2:
-            let relatorios = Number(prompt("Qual relatório deseja emitir?\n1 - Relatório Unificado\n2 - Relatório Detalhado"));
-            if (relatorios === 1 || relatorios === 2) {
-                emissaoRelatorios(relatorios);
-            } else {
-                alert("Opção inválida.");
-                menu();
-            }
-            break;
-        case 3:
-            alert("Programa encerrado.");
-            break;
-        default:
-            alert("Informe uma opção válida!!")
-            menu();
-    }
-}
-
-
-
-// Função para cadastrar as Despesas
-function cadastroDespesa(categoriaDespesa: number) {
-
-    // Dados que devem ser inseridos de cada despesa.
-    const descricao: string = String(prompt("Informe a descrição da despesa"))
-    const valor = Number(prompt("Informe o valor da despesa"))
-    const data = prompt("Informe uma data")
-    alert("Despesa cadastrada com sucesso!!")
-
-    // Switch para guardar os dados na categoria escolhida através do parametro da Função
-    switch (categoriaDespesa) {
-        case 1:
-            lanches.push(descricao);
-            lanches.push(valor);
-            lanches.push(data);
-            menu();
-        case 2:
-            livros.push(descricao);
-            livros.push(valor);
-            livros.push(data);
-            menu();
-        case 3:
-            transporte.push(descricao);
-            transporte.push(valor);
-            transporte.push(data);
-            menu();
-        case 4:
-            material.push(descricao);
-            material.push(valor);
-            material.push(data);
-            menu();
-        default:
-            alert("Informe um valor válido!!")
-            menu();
-
-    }
-}
 
 // Função para emissão dos relatorios
 function emissaoRelatorios(relatorios: number) {
@@ -122,7 +50,6 @@ function emissaoRelatorios(relatorios: number) {
 
             Categoria: Material | Valor Total: R$${calcularTotalCategoria(material).toFixed(2)}
             `)
-            menu();
         case 2:
             alert(`Relatorio de despesas Detalhado:\n
             Categoria: Lanches\n
@@ -137,7 +64,6 @@ function emissaoRelatorios(relatorios: number) {
             Categoria: Material\n
             ${materialFormatados}
             `)
-            menu();
         default:
             alert("Informe um valor válido")
             break;

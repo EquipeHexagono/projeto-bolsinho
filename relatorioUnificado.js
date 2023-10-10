@@ -13,5 +13,5 @@ function unificado() {
     Categoria: Transporte | Valor Total: R$${calcularTotalCategoria(transporte)}\n
     Categoria: Material | Valor Total: R$${calcularTotalCategoria(material)}
     `;
-    exibirRelatorio === null || exibirRelatorio === void 0 ? void 0 : exibirRelatorio.textContent = "<p>" + conteudo + "</p>";
+    exibirRelatorio === null || exibirRelatorio === void 0 ? void 0 : exibirRelatorio.textContent = conteudo;
 }

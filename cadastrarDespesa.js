@@ -11,6 +11,7 @@ function cadastrarLanche() {
     lanches.push(valor);
     lanches.push(data);
     lanches.push(descricao);
+    let respostaSucesso = alert("Despesa Cadastrada com sucesso");
 }
 function cadastrarLivro() {
     const descricao = document.getElementById("descricao");
@@ -19,6 +20,7 @@ function cadastrarLivro() {
     livros.push(valor);
     livros.push(data);
     livros.push(descricao);
+    let respostaSucesso = alert("Despesa Cadastrada com sucesso");
 }
 function cadastrarTransporte() {
     const descricao = document.getElementById("descricao");
@@ -27,6 +29,7 @@ function cadastrarTransporte() {
     transporte.push(valor);
     transporte.push(data);
     transporte.push(descricao);
+    let respostaSucesso = alert("Despesa Cadastrada com sucesso");
 }
 function cadastrarMaterial() {
     const descricao = document.getElementById("descricao");
@@ -35,4 +38,5 @@ function cadastrarMaterial() {
     material.push(descricao);
     material.push(valor);
     material.push(data);
+    let respostaSucesso = alert("Despesa Cadastrada com sucesso");
 }

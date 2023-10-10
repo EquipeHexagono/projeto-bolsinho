@@ -128,3 +128,12 @@ form {
     border: 2px solid black;
     border-radius: 2px;
 }
+
+#unificado {
+    width: 90%;
+    height: 60%;
+    background-color: gainsboro;
+    color: black;
+    border-radius: 2px;
+    overflow-y: auto;
+}

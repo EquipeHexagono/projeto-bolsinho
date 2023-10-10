@@ -16,5 +16,5 @@ function unificado() {
     Categoria: Material | Valor Total: R$${calcularTotalCategoria(material)}
     `;
 
-    exibirRelatorio?.textContent = "<p>" + conteudo + "</p>";
+    exibirRelatorio?.textContent = conteudo;
 }

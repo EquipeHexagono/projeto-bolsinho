@@ -107,35 +107,17 @@ function emissaoRelatorios(relatorios) {
             return `${material}`;
         }
     }).join(' - ');
-    // Código para fazer a somatoria total das categorias
-    let totalLanches = 0;
-    let totalLivros = 0;
-    let totalTransporte = 0;
-    let totalMaterial = 0;
-
-    function calcularTotal(categoria) {
-        let total = 0;
-        for (let i = 0; i < categoria.length; i += 3) {
-            total += categoria[i + 1];
-        }
-        return total;
-    }
-    //Calculando o valor total gasto de cada acategria
-    calcularTotal(lanches)
-    calcularTotal(material);
-    calcularTotal(transporte);
-    calcularTotal(material);
     // Switch para exibir resultados
     switch (relatorios) {
         case 1:
             alert(`Relatorio de despesas unificado:\n
-            Categoria: Lanche | Valor Total: R$${totalLanches}\n
+            Categoria: Lanche | Valor Total: R$${calcularTotalCategoria(lanches).toFixed(2)}\n
 
-            Categoria: Livros | Valor Total: R$${totalLivros}\n
+            Categoria: Livros | Valor Total: R$${calcularTotalCategoria(livros).toFixed(2)}\n
 
-            Categoria: Transporte | Valor Total: R$${totalTransporte}\n
+            Categoria: Transporte | Valor Total: R$${calcularTotalCategoria(transporte).toFixed(2)}\n
 
-            Categoria: Material | Valor Total: R$${totalMaterial}
+            Categoria: Material | Valor Total: R$${calcularTotalCategoria(material).toFixed(2)}
             `);
             menu();
         case 2:
@@ -158,3 +140,11 @@ function emissaoRelatorios(relatorios) {
             break;
     }
 }
+function calcularTotalCategoria(categoria) {
+    let total = 0;
+    for (let i = 0; i < categoria.length; i += 3) {
+        total += categoria[i + 1];
+    }
+    return total;
+}
+menu();

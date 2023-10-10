@@ -129,7 +129,8 @@ form {
     border-radius: 2px;
 }
 
-#unificado {
+#unificado,
+#detalhado {
     width: 90%;
     height: 60%;
     background-color: gainsboro;

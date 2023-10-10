@@ -147,4 +147,3 @@ function calcularTotalCategoria(categoria) {
     }
     return total;
 }
-menu();

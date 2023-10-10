@@ -158,5 +158,3 @@ function calcularTotalCategoria(categoria: any[]): number {
 
     return total;
 }
-
-menu();

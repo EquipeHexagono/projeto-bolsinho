@@ -1,40 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .menu {
-    border: 1px solid rgb(162, 0, 255);
-    border-bottom: 0px;
+    border: 2px solid rgb(162, 0, 255);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 4px;
 }
 
 form {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    font-size: 50px;
-    margin-left: 60px;
-}
-
-label {
-    margin-left: 140px;
-}
-
-h1 {
-    font-size: 30px;
-    padding-right: 20px;
-    padding-left: 68px;
-}
-
-.botao {
-    display: flex;
-    margin: 50px;
-    padding-right: 100px;
-    padding-left: 100px;
-    font-size: 18px;
     align-items: center;
+    flex-direction: column;
+    width: 45%;
+    height: 85%;
+    font-size: 50px;
 }
 
-.botao2 {
-    display: flex;
-    margin-left: 50px;
-    padding-left: 100px;
-    padding-right: 135px;
-    margin-top: -30px;
-    font-size: 18px;
+.menu h1 {
+    font-size: 40px;
+}
+
+.menu button {
+    width: 80%;
+    padding: 10px;
+    font-size: 20px;
 }
